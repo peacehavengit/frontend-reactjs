@@ -1,13 +1,35 @@
 import React, { Component } from 'react';
-// import { Link } from "react-router-dom";
 import Sidebar from '../layout/sidebar';
-import './home.css'
-
+import '../css/home.css'
+import axios from "axios";
+import auth from '../../config/auth';
+import serverUrl from '../../environments/environment';
+import { NotificationManager } from 'react-notifications';
 export default class Homepage extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            repocount: ''
+        }
+        if (!auth.isLoggedIn()) {
+            this.props.history.push('/');
+        } else {
+            this.repositories();
+        }
+    }
+    repositories() {
+        axios.get(serverUrl + 'users/repositories').then((response) => {
+            this.setState({ repocount: response.data.data.length })
+        }).catch((error) => {
+            NotificationManager.error('', '', 2200);
+        });
+    }
+
     render() {
         return (
             <div>
-                <div className='container'>
+                <div>
                     <Sidebar />
                     <div className="custom-margin">
                         <div className="card kyc-card mb-4">
@@ -24,7 +46,7 @@ export default class Homepage extends Component {
                                             <h2 className="font-weight-medium">
                                                 <span className="animated-count">Repositories</span>
                                             </h2>
-                                            <p className="text-gray d-block mt-3" > 0 Available</p>
+                                            <p className="text-gray d-block mt-3" > {this.state.repocount} Available</p>
                                             {/* <p className="text-gray d-block mt-3" >0 Available </p> */}
                                             <div> <button className="btn add-btn-view" > View All</button></div>
 

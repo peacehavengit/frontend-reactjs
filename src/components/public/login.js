@@ -32,7 +32,7 @@ export default class Login extends Component {
                 NotificationManager.success('', response.data.message, 2200);
                 console.log('token', response);
                 let token = response.data.token
-                localStorage.setItem('token', JSON.stringify(token));
+                localStorage.setItem('token', token);
                 this.props.history.push('/homepage');
             } else {
                 NotificationManager.error('', response.data.message, 2200);
@@ -45,12 +45,12 @@ export default class Login extends Component {
 
     render() {
         return (
-            // <div className="container">
+            <div>
             <div className="center">
                 <div className="col-md-5 mx-auto">
                     {/* <div id="first"> */}
                     <div className="data-form">
-                        <div className="logo mb-3">
+                        <div className=" mb-3">
                             <div className="col-md-12 text-center">
                                 <h1>Login</h1>
                             </div>
@@ -77,7 +77,7 @@ export default class Login extends Component {
                                 here</Link> </p>
                         </div>
                     </div>
-                    {/* </div> */}
+                    </div>
                 </div>
             </div>
 

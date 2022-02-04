@@ -1,0 +1,27 @@
+.support-card{
+    max-width: 500px;
+    margin: 10px auto;
+}
+.support-card img{
+    max-width: 300px;
+    margin: 10px auto;
+}
+.orange-btn {
+    background-color: #FC9C6A;
+    color: #fff;
+    padding: 10px 20px;
+    border: 0px solid transparent;
+    max-width: 100%;
+    margin: 10px auto;
+    border-radius: 4px;
+    transition: 0.6s;
+}
+
+.orange-btn:hover {
+    opacity: 0.8;    
+    color: #fff;
+}
+
+a.orange-btn {
+    text-decoration: none;
+}

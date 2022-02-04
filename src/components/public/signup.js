@@ -92,7 +92,7 @@ export default class Signup extends Component {
         }).then((response) => {
             if (response.data.success === true) {
                 NotificationManager.success('', response.data.message, 2200);
-                this.props.history.push('/');
+                this.props.history.push('/login');
             } else {
                 NotificationManager.error('', response.data.message, 2200);
             }
@@ -104,12 +104,12 @@ export default class Signup extends Component {
 
     render() {
         return (
-            <div className="container position-relative">
+            <div className=" position-relative">
                 <div className="register-box center reg-form">
                     <div >
                         {/* <div id="first"> */}
                         <div className="data-form form ">
-                            <div className="logo mb-3">
+                            <div className="mb-3">
                                 <div className="col-md-12 text-center">
                                     <h1>Signup</h1>
                                 </div>
@@ -145,7 +145,7 @@ export default class Signup extends Component {
                                 </div>
                             </form>
                             <div className='btn-center'>
-                                <p className='colortext'> Already have an account?<Link to="/">Sign in</Link></p>
+                                <p className='colortext'> Already have an account?<Link to="/login">Sign in</Link></p>
                             </div>
                         </div>
                         {/* </div> */}

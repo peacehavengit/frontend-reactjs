@@ -7,7 +7,7 @@ auth.isLoggedIn = () => {
     let token = localStorage.getItem('token');
     console.log('token is avail',token);
     if (token) {
-        axios.defaults.headers.common['Authorization'] = 'bearer ' + token;
+        axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
         return token;
     }
 }

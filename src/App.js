@@ -11,13 +11,15 @@ import Settings from "./components/secure/settings";
 import Profile from "./components/secure/profile";
 import Support from "./components/secure/support";
 import Faq from "./components/secure/faq";
+import Landing from "./components/public/landing";
 
 function App() {
   return (
     <div className="App">
       <NotificationContainer />
       <Switch>
-        <Route exact path="/" component={Login} />
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/homepage" component={Homepage} />
         <Route exact path="/create-repo" component={CreateRepo} />
