@@ -14,7 +14,7 @@ export default class CreateRepo extends Component {
     render() {
         return (
             <div>
-                <div className="container">
+                <div>
                     <Sidebar />
                     <div className="custom-margin">
                         <div> <button className="btn gradbtn float-right mb-3" onClick={this.routeto}>Check Repositories</button></div>

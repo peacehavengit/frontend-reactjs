@@ -1,0 +1,23 @@
+.profile-card {
+    /* max-width: 1000px; */
+    margin: 0 auto;
+    background-color: #fdb38c;
+    color: #000;
+    background-position: revert;
+    width: 50%;
+    padding: 7rem;
+}
+.detail {
+    margin-bottom: 10px;
+}
+.detail p {
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-weight: 800;
+}
+.detail p {
+    word-break: break-all;
+  }
+/* .usertitle{
+
+} */

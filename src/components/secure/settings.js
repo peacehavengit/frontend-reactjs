@@ -5,7 +5,7 @@ import Sidebar from '../layout/sidebar';
 export default class Settings extends Component {
     render() {
         return (
-            <div className="container">
+            <div >
                 <div className="row">
                     <Sidebar />
                     <div style={{ marginTop: '61px' }}>
